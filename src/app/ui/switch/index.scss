@@ -22,12 +22,29 @@
       @apply relative p-[5px];
 
       &--underball {
-        @apply w-10 h-4 bg-gray-400 peer-checked:bg-slate-500 rounded-full shadow-inner;
+        @apply
+          w-10
+          h-4
+          bg-dark  
+          rounded-full
+          shadow-border
+        ;
         transition: all ease-in-out 100ms;
       }
 
       &--ball {
-        @apply absolute w-6 h-6 bg-white dark:bg-black rounded-full shadow-md shadow-black dark:shadow-white left-0 top-[1px] peer-checked:left-[calc(100%-24px)];
+        @apply
+          absolute
+          left-0
+          top-[1px]
+          w-6
+          h-6
+          bg-white
+          dark:bg-dark
+          rounded-full
+          peer-checked:left-[calc(100%-24px)]
+          shadow-border
+        ;
         transition: all ease-in-out 100ms;
       }
 

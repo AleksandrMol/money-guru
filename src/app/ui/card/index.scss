@@ -1,0 +1,15 @@
+.card {
+  @apply
+    flex
+    flex-col
+    gap-4
+    px-4
+    py-[14px]
+
+    text-light
+
+    bg-dark
+    rounded-[10px]
+    shadow-border
+  ;
+}

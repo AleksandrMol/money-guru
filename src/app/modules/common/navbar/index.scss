@@ -1,0 +1,25 @@
+.navbar {
+  @apply
+    fixed
+    bottom-0
+    left-0
+    right-0
+    shadow-custom
+    bg-light
+    dark:bg-dark
+    dark:border-t
+    dark:border-light
+  ;
+
+  &__list {
+    @apply flex justify-around items-center h-[50px];
+
+    &--item {
+      @apply grow h-full;
+
+      & a {
+        @apply flex justify-center items-center h-full cursor-pointer;
+      }
+    }
+  }
+}

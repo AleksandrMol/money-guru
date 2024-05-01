@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { RouterProvider } from "react-router-dom";
 
 import { router } from "./app/tools/routes/routes";
-import PageLoader from "./app/tools/components/page-loader";
+import PageLoader from "./app/modules/common/page-loader";
 import { SnackbarProvider } from "notistack";
 
 import "./App.css";

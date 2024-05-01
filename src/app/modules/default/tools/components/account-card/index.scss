@@ -1,0 +1,15 @@
+.account-card-header {
+  @apply relative flex items-center gap-2 px-2 pb-1;
+
+  &__title {
+    @apply grow overflow-hidden text-nowrap text-ellipsis;
+  }
+
+  &__line {
+    @apply absolute right-[-1px] bottom-0 left-[-1px] h-[1px] bg-light rounded-full;
+  }
+}
+
+.account-card-count {
+  @apply flex justify-center items-center py-2 text-3xl font-medium;
+}

@@ -1,5 +1,6 @@
 enum RouterPaths {
-  DEFAULT = '/'
+  DEFAULT = '/',
+  LISTS = '/lists'
 }
 
 export { RouterPaths }

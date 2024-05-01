@@ -34,15 +34,13 @@ module.exports = {
     },
     extend: {
       colors: {
-          "main": "#58A0A3",
-          "mainHover": "#477480",
-          "mainActive": "#325058",
+          "dark": "#242424",
+          "light": "#F6F6F6",
 
-          "error": "#E70000",
-
-          "success": "#41B15A",
-
-          "white": "#FFFFFF",
+          "grey-1": "#2D2D2D",
+      },
+      boxShadow: {
+        'custom': '1px 1px 4px 0 rgb(36, 36, 36, 0.35)',
       }
     },
   },

@@ -1,0 +1,17 @@
+.header {
+  @apply
+    shadow-custom
+    dark:border-b
+    dark:border-light
+  ;
+
+  &__container {
+    @apply
+      base-container
+      flex
+      items-center
+      justify-between
+      h-[50px]
+    ;
+  }
+}
