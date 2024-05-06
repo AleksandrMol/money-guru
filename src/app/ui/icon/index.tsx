@@ -1,12 +1,11 @@
-import type { IIcon } from "../../tools/assets/svg/interface"
-
+import type { TColor, TIconFunction, TSize } from "../common/interface"
 import "./index.scss"
 
 interface IIconProps {
-  size?: 'small' | 'medium' | 'large'
-  color?: 'dark' | 'light'
+  size?: TSize
+  color?: TColor
 
-  content: (props: IIcon) => JSX.Element
+  content: TIconFunction
 }
 
 const Icon = ({

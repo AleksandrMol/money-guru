@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "../../header";
-import Navbar from "../../navbar";
+import { Header } from "../../components/header";
+import Navbar from "../../components/navbar";
 
 import "./index.scss"
 

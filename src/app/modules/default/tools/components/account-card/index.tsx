@@ -1,8 +1,10 @@
 import { Edit } from "../../../../../tools/assets/svg"
 import { Icon } from "../../../../../ui"
+import { IButtonProps } from "../../../../../ui/button"
 import Card from "../../../../../ui/card"
+import { ButtonList } from "../../../../common/components/button-list"
 
-import type { IIcon } from "../../../../../tools/assets/svg/interface"
+import type { TIconFunction } from "../../../../../ui/common/interface"
 
 import "./index.scss"
 
@@ -10,7 +12,7 @@ interface IAccountCardProps {
   title: string
   count: number
 
-  icon: (props: IIcon) => JSX.Element
+  icon: TIconFunction
 
   handleOnEdit: () => void
   handleOnMinus: () => void
@@ -27,6 +29,22 @@ const AccountCard = (props: IAccountCardProps) => {
     handleOnMinus,
     handleOnPlus
   } = props
+
+  const buttonList: Omit<IButtonProps, 'size' | 'side'>[] = [
+    {
+      children: 'Button_1',
+      buttonProps: {
+        onClick: handleOnMinus
+      }
+    },
+  
+    {
+      children: 'Button_2',
+      buttonProps: {
+        onClick: handleOnPlus
+      }
+    }
+  ]
 
   const Header = (): JSX.Element => {
     return (
@@ -70,7 +88,7 @@ const AccountCard = (props: IAccountCardProps) => {
     <Card
       headerContent={ <Header /> }
       mainContent={ <Count /> }
-      footerContent="Footer"
+      footerContent={ <ButtonList data={ buttonList } size='small'/> }
     />
   )
 }

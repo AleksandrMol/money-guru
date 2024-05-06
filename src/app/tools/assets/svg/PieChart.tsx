@@ -1,4 +1,4 @@
-import { IIcon } from "./interface"
+import { IIcon } from "../../../ui/common/interface"
 
 const PieChart = ({ className }: IIcon) => {
   return (

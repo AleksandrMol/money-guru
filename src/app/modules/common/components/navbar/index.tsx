@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
-import { RouterPaths } from '../../../tools/common/enums/router-paths'
-import { Icon } from '../../../ui'
-import { Book, PieChart } from '../../../tools/assets/svg'
+import { RouterPaths } from '../../../../tools/common/enums/router-paths'
+import { Icon } from '../../../../ui'
+import { Book, PieChart } from '../../../../tools/assets/svg'
 
 import './index.scss'
 

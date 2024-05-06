@@ -26,8 +26,15 @@ body {
       dark:text-light
     ;
     }
-    
+
   .shadow-border {
-    @apply shadow-custom dark:border dark:border-light;
+    @apply
+      shadow-custom
+      dark:border-t
+      dark:border-r
+      dark:border-b
+      dark:border-l
+      dark:border-light
+    ;
   }
 }

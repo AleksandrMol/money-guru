@@ -1,0 +1,58 @@
+.button {
+  @apply
+    relative
+    flex
+    gap-1
+    
+    bg-grey-1
+    text-light
+    shadow-border
+  ;
+
+  &__line {
+    @apply absolute w-[1px] rounded-full bg-light z-10;
+  }
+
+  &--small {
+    @apply px-3 py-2 text-xs;
+  }
+  &--medium {
+    @apply px-5 py-2 text-base;
+  }
+  &--large {
+    @apply px-7 py-3 text-lg;
+  }
+
+  &--left {
+    @apply
+      rounded-s-lg
+      border-r-0
+      dark:border-r-0
+    ;
+    & .button__line {
+      @apply top-[-2px] right-[-0.5px] bottom-[-2px];
+    }
+  }
+  &--right {
+    @apply
+      rounded-e-lg
+      border-l-0
+      dark:border-l-0
+    ;
+  }
+  &--middle {
+    @apply
+      rounded-none
+      border-l-0
+      dark:border-l-0
+      border-r-0
+      dark:border-r-0
+    ;
+    & .button__line {
+      @apply top-[-2px] right-[-0.5px] bottom-[-2px];
+    }
+  }
+  &--alone {
+    @apply rounded-lg;
+  }
+}

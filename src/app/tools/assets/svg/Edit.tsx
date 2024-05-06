@@ -1,4 +1,4 @@
-import type { IIcon } from './interface'
+import { IIcon } from "../../../ui/common/interface"
 
 const Edit = ({ className }: IIcon) => {
   return (

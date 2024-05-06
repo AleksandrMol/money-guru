@@ -1,0 +1,7 @@
+.button-list {
+  @apply flex justify-between items-center;
+
+  &__item {
+    @apply grow flex justify-center items-center px-0;
+  }
+}
