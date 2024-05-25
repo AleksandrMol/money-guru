@@ -1,4 +1,4 @@
-import { Book } from "../../tools/assets/svg"
+import { Book } from "@app/tools/assets/svg"
 import { AccountCard } from "./tools/components/account-card"
 
 const DefaultPage = () => {

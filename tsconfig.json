@@ -1,26 +1,30 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "lib": ["dom", "es2017"],
+    "allowJs": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@data/*": ["data/*"],
+      "@domain/*": ["domain/*"]
+    },
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-  ]
+    "./src/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",],
+  "exclude": ["node_modules", "dist"],
 }

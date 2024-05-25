@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import DefaultPage from "../../modules/default";
-import ListsPage from "../../modules/lists";
+import DefaultPage from "@app/modules/default";
+import ListsPage from "@app/modules/lists";
 import { RouterPaths } from "../common/enums/router-paths";
-import { BaseLayout } from "../../modules/common/layout/base-layout";
+import { BaseLayout } from "@app/modules/common/layout/base-layout";
 
 const router = createBrowserRouter([
 	{

@@ -1,5 +1,5 @@
-import { Button, type IButtonProps } from '../../../../ui/button'
-import { TSize } from '../../../../ui/common/interface'
+import { Button, type IButtonProps } from '@app/ui/button'
+import { TSize } from '@app/ui/common/interface'
 
 import "./index.scss"
 

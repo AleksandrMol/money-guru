@@ -1,10 +1,10 @@
-import { Edit } from "../../../../../tools/assets/svg"
-import { Icon } from "../../../../../ui"
-import { IButtonProps } from "../../../../../ui/button"
-import Card from "../../../../../ui/card"
-import { ButtonList } from "../../../../common/components/button-list"
+import { Edit } from "@app/tools/assets/svg"
+import { Icon } from "@app/ui"
+import { IButtonProps } from "@app/ui/button"
+import Card from "@app/ui/card"
+import { ButtonList } from "@app/modules/common/components/button-list"
 
-import type { TIconFunction } from "../../../../../ui/common/interface"
+import type { TIconFunction } from "@app/ui/common/interface"
 
 import "./index.scss"
 

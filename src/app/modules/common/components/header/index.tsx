@@ -1,5 +1,4 @@
-import { Switch } from "../../../../ui"
-
+import { Switch } from "@app/ui"
 import "./index.scss"
 
 const Header = () => {
