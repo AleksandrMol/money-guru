@@ -1,9 +1,11 @@
 import { Book } from "@app/tools/assets/svg"
 import { AccountCard } from "./tools/components/account-card"
+import { CollapsedCard } from "../lists/tools/components/collapsed-card"
+import { ArrowDown } from "@app/tools/assets/svg/ArrowDown"
 
 const DefaultPage = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       <AccountCard
         title="Сбер"
         count={ 35000 }
@@ -11,6 +13,28 @@ const DefaultPage = () => {
         handleOnEdit={() => console.log("Edit")}
         handleOnMinus={() => console.log("Minus")}
         handleOnPlus={() => console.log("Plus")}
+      />
+
+      <CollapsedCard
+        buttonList={[
+          {
+            children: 'Button_1',
+            buttonProps: {
+              onClick: () => {}
+            }
+          },
+        
+          {
+            children: 'Button_2',
+            buttonProps: {
+              onClick: () => {}
+            }
+          }
+        ]}
+        icons={{
+          end: ArrowDown,
+        }}
+        title="Писечки попочки"
       />
     </div>
   )

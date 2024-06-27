@@ -7,17 +7,18 @@ interface ICardProps {
   headerContent?: React.ReactNode
   footerContent?: React.ReactNode
 
-  isCollapsed?: boolean
   isOpen?: boolean
 }
 
+/**
+ * Базовый компонент карты
+ */
 const Card = (props: ICardProps) => {
   const {
     mainContent,
     headerContent,
     footerContent,
 
-    // isCollapsed,
     isOpen = true,
   } = props
   return (

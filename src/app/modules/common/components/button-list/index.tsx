@@ -8,6 +8,9 @@ interface IBurronListProps {
   size: TSize
 }
 
+/**
+ * Компонент списка кнопок
+ */
 const ButtonList = ({ data, size }: IBurronListProps) => {
   return (
     <div className="button-list">
@@ -40,4 +43,5 @@ const ButtonList = ({ data, size }: IBurronListProps) => {
   )
 }
 
+export type { IBurronListProps }
 export { ButtonList }
