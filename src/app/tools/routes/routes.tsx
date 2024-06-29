@@ -3,6 +3,7 @@ import DefaultPage from "@app/modules/default";
 import ListsPage from "@app/modules/lists";
 import { RouterPaths } from "../common/enums/router-paths";
 import { BaseLayout } from "@app/modules/common/layout/base-layout";
+import TransferPage from "@app/modules/transfer";
 
 const router = createBrowserRouter([
 	{
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
 			{
 				path: RouterPaths.LISTS,
 				element: <ListsPage/>,
+			},
+			{
+				path: RouterPaths.TRANSFER,
+				element: <TransferPage/>,
 			}
 		]
 	},

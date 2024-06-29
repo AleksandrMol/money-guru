@@ -48,8 +48,10 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'), // Весь наш результат складываем в папку dist
+    publicPath: '/'
   },
   devServer: {
+    historyApiFallback: true,
     compress: true,
     port: 3000,
     hot: true,
