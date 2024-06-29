@@ -16,6 +16,7 @@ const DefaultPage = () => {
       />
 
       <CollapsedCard
+        title="Продолжить разработку компонентов"
         buttonList={[
           {
             children: 'Button_1',
@@ -34,7 +35,6 @@ const DefaultPage = () => {
         icons={{
           end: ArrowDown,
         }}
-        title="Писечки попочки"
       />
     </div>
   )

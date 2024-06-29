@@ -32,6 +32,8 @@ const Card = (props: ICardProps) => {
       { isOpen && (
         <>
           <div className="card__main">
+            <div className="card__main--line"></div>
+
             { mainContent }
           </div>
     

@@ -12,4 +12,12 @@
     rounded-[10px]
     shadow-border
   ;
+
+  &__main {
+    @apply relative;
+
+    &--line {
+      @apply absolute right-[-1px] top-[-16px] left-[-1px] h-[1px] bg-light rounded-full;
+    }
+  }
 }

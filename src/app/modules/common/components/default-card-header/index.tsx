@@ -62,7 +62,6 @@ const DefaultCardHeader = (props: IDefaultCardHeaderProps) => {
             />
           </div>
       }
-      <div className="default-card-header__line"></div>
     </div>
   )
 }
