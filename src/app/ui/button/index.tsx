@@ -15,6 +15,9 @@ interface IButtonProps extends PropsWithChildren {
   }
 }
 
+/**
+ * Компонент кнопки
+ */
 const Button = ({ ...props }: IButtonProps) => {
   const {
     children,

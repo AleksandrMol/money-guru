@@ -4,8 +4,14 @@ import { Icon } from '@app/ui'
 import { Book, PieChart } from '@app/tools/assets/svg'
 
 import './index.scss'
+import { useNavbarPresenter } from './presenter'
 
 const Navbar = () => {
+
+  const {
+    toLists
+  } = useNavbarPresenter()
+
   return (
     <nav className="navbar">
       <div className="base-container">
@@ -17,7 +23,7 @@ const Navbar = () => {
           </li>
 
           <li className="navbar__list--item">
-            <NavLink to={ RouterPaths.LISTS }>
+            <NavLink to={ toLists }>
               <Icon size="large" content={ Book } />
             </NavLink>
           </li>

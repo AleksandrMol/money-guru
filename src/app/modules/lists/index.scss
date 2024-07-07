@@ -1,0 +1,17 @@
+.list-page {
+  &__header {
+    @apply flex justify-between items-center mb-4;
+
+    &--title {
+      @apply text-base font-medium;
+    }
+
+    &--add-button {
+      @apply px-4 py-1;
+    }
+  }
+
+  &__list {
+    @apply flex flex-col gap-4;
+  }
+}

@@ -5,6 +5,7 @@ import { useState } from "react"
 
 interface ICollapsedCardProps extends Omit<IDefaultCardHeaderProps, "handleOnEndIconClick" | "handleOnStartIconClick"> {
   buttonList: IBurronListProps["data"]
+  children: React.ReactNode
 }
 
 /**
@@ -15,7 +16,8 @@ const CollapsedCard = (props: ICollapsedCardProps) => {
     title,
     icons,
 
-    buttonList
+    buttonList,
+    children
   } = props
   const [isOpen, setIsOpen] = useState(false)
 
@@ -33,7 +35,7 @@ const CollapsedCard = (props: ICollapsedCardProps) => {
           handleOnHeaderClick={ handleSetIsOpen }
         />
       }
-      mainContent={ <>content</> }
+      mainContent={ children }
       footerContent={ <ButtonList data={ buttonList } size="small"/> }
     />
   )

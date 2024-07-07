@@ -2,7 +2,7 @@
 const TransferPage = () => {
   return (
     <div>
-        Transfer Page
+      Transfer Page
     </div>
   )
 }

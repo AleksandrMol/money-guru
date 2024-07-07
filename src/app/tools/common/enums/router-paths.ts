@@ -1,6 +1,6 @@
 enum RouterPaths {
   DEFAULT = '/',
-  LISTS = '/lists',
+  LISTS = '/lists/:entity',
   TRANSFER = '/transfer/from/:from/to/:to'
 }
 
