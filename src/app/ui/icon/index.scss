@@ -17,6 +17,11 @@
     }
 
     /*color*/
+    &--invertion {
+      & path {
+        @apply fill-light dark:fill-dark;
+      }
+    }
     &--dark {
       & path {
         @apply fill-dark;

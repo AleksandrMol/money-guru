@@ -1,20 +1,28 @@
-import { ListEntities } from "@app/modules/lists/enum/list-entities-enum"
-import { RouterPaths } from "@app/tools/common/enums/router-paths"
+import { RouterPaths, TransferParamsEnum } from "@app/tools/common/enums/router-paths"
 import { setRouterParams } from "@app/tools/routes/tools/setRouterParams"
 import { useNavigate } from "react-router-dom"
 
+interface INavigateToTransaction {
+  type: string,
+  from: string,
+}
+
 const useDefaultPagePresenter = () => {
   const nav = useNavigate()
-  const navigateToPlusCount = () => {
-    nav(setRouterParams({
+  const navigateToTrsnsaction = ({ type, from }: INavigateToTransaction) => {
+    nav(setRouterParams<TransferParamsEnum>({
       link: RouterPaths.TRANSFER,
       replace: [
         {
-          param: ':from',
-          to: 'count_1'
+          param: TransferParamsEnum.TYPE,
+          to: type
         },
         {
-          param: ':to',
+          param: TransferParamsEnum.FROM,
+          to: from
+        },
+        {
+          param: TransferParamsEnum.TO,
           to: 'count_2'
         },
       ]
@@ -22,7 +30,7 @@ const useDefaultPagePresenter = () => {
   }
 
   return {
-    navigateToPlusCount
+    navigateToTrsnsaction
   }
 
 }

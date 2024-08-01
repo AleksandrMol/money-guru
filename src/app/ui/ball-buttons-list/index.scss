@@ -1,0 +1,12 @@
+
+.default-ball {
+  @apply shrink-0 w-[50px] h-[50px] flex items-center justify-center rounded-full shadow-border;
+}
+
+.active-ball {
+  @apply peer-checked:bg-dark peer-checked:dark:bg-light;
+
+  & path {
+    @apply peer-checked:fill-light peer-checked:dark:fill-dark;
+  }
+}

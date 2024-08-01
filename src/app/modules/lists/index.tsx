@@ -6,6 +6,10 @@ import { ArrowDown } from '@app/tools/assets/svg/ArrowDown'
 
 import './index.scss'
 
+/**
+ * Страница списков
+ * @return JSX
+ */
 const ListsPage = () => {
 
   const {

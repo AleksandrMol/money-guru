@@ -2,10 +2,14 @@ import { Book } from "@app/tools/assets/svg"
 import { AccountCard } from "./tools/components/account-card"
 import { useDefaultPagePresenter } from "./presenter"
 
+/**
+ * Дефолтная страница
+ * @return JSX
+ */
 const DefaultPage = () => {
 
   const { 
-    navigateToPlusCount
+    navigateToTrsnsaction
    } = useDefaultPagePresenter()
 
   return (
@@ -15,10 +19,11 @@ const DefaultPage = () => {
         count={ 35000 }
         icon={ Book }
         handleOnEdit={ () => console.log("Edit") }
-        handleOnMinus={ () => navigateToPlusCount() }
-        handleOnPlus={ () => navigateToPlusCount() }
+        handleOnMinus={ () => navigateToTrsnsaction({ type: 'minus', from: 'Сбер' }) }
+        handleOnPlus={ () => navigateToTrsnsaction({ type: 'plus', from: 'Сбер' }) }
       />
-      Продолжить работу над компонентами.
+
+      Было бы не плохо лучше проработать страницу списков и начать работу над страницей транзакций.
     </div>
   )
 }

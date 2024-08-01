@@ -1,0 +1,17 @@
+.transfer-form {
+  &__container {
+    @apply flex flex-col gap-4 items-start;
+  }
+
+  &__title {
+    @apply font-medium text-base;
+  }
+
+  &__small-title {
+    @apply text-xs;
+  }
+  
+  &__radio-list {
+    @apply p-[3px] flex gap-2 w-full overflow-x-auto;
+  }
+}

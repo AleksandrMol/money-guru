@@ -1,13 +1,13 @@
 import { ListEntities } from "@app/modules/lists/enum/list-entities-enum"
-import { RouterPaths } from "@app/tools/common/enums/router-paths"
+import { ListsParamsEnum, RouterPaths } from "@app/tools/common/enums/router-paths"
 import { setRouterParams } from "@app/tools/routes/tools/setRouterParams"
 
 const useNavbarPresenter = () => {
-  const toLists = setRouterParams({
+  const toLists = setRouterParams<ListsParamsEnum>({
     link: RouterPaths.LISTS,
     replace: [
       {
-        param: ':entity',
+        param: ListsParamsEnum.ENTITY,
         to: ListEntities.ACCOUNTS
       },
     ]
