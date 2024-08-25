@@ -9,21 +9,27 @@ import { useDefaultPagePresenter } from "./presenter"
 const DefaultPage = () => {
 
   const { 
-    navigateToTrsnsaction
+    accounts,
+    // db,
+
+    navigateToTrsnsaction,
    } = useDefaultPagePresenter()
 
   return (
     <div className="flex flex-col gap-2">
-      <AccountCard
-        title="Сбер"
-        count={ 35000 }
-        icon={ Book }
-        handleOnEdit={ () => console.log("Edit") }
-        handleOnMinus={ () => navigateToTrsnsaction({ type: 'minus', from: 'Сбер' }) }
-        handleOnPlus={ () => navigateToTrsnsaction({ type: 'plus', from: 'Сбер' }) }
-      />
+      { accounts?.map((el) => {
+        return <AccountCard
+          key={ el.id }
+          title={ el.name }
+          count={ el.count }
+          icon={ Book }
+          handleOnEdit={ () => console.log("Edit") }
+          handleOnMinus={ () => navigateToTrsnsaction({ type: 'minus', from: el.id }) }
+          handleOnPlus={ () => navigateToTrsnsaction({ type: 'plus', from: el.id }) }
+        />
+      }) }
 
-      Было бы не плохо лучше проработать страницу списков и начать работу над страницей транзакций.
+      Надо бы начать работу над логикой.
     </div>
   )
 }

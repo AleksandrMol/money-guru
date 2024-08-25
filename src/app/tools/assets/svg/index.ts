@@ -1,3 +1,5 @@
 export * from './Book'
 export * from './PieChart'
 export * from './Edit'
+export * from './ArrowDown'
+export * from './Plus'

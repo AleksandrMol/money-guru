@@ -42,3 +42,4 @@ const CollapsedCard = (props: ICollapsedCardProps) => {
 }
 
 export { CollapsedCard }
+export type { ICollapsedCardProps }

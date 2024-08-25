@@ -2,7 +2,6 @@ import { Plus } from '@app/tools/assets/svg/Plus'
 import { Button } from '@app/ui/button'
 import { CollapsedCard } from './tools/components/collapsed-card'
 import { useListPagePresenter } from './presenter'
-import { ArrowDown } from '@app/tools/assets/svg/ArrowDown'
 
 import './index.scss'
 
@@ -17,7 +16,7 @@ const ListsPage = () => {
     entity,
     titleList
   } = useListPagePresenter()
-  
+
   return (
     <div className="list-page">
       <div className="list-page__header">
@@ -39,12 +38,8 @@ const ListsPage = () => {
 
       <div className="list-page__list">
         {
-          cardList.map((el) =>
-            <CollapsedCard
-            icons={{
-              end: ArrowDown
-            }}
-            { ...el } />
+          cardList?.map((el) =>
+            <CollapsedCard { ...el } />
           )
         }
       </div>

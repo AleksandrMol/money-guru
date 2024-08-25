@@ -1,5 +1,6 @@
 import { RouterPaths, TransferParamsEnum } from "@app/tools/common/enums/router-paths"
 import { setRouterParams } from "@app/tools/routes/tools/setRouterParams"
+import { useAccountDBInit } from "@data/database/accounts/init"
 import { useNavigate } from "react-router-dom"
 
 interface INavigateToTransaction {
@@ -9,6 +10,10 @@ interface INavigateToTransaction {
 
 const useDefaultPagePresenter = () => {
   const nav = useNavigate()
+  const {
+    accounts,
+  } = useAccountDBInit()
+
   const navigateToTrsnsaction = ({ type, from }: INavigateToTransaction) => {
     nav(setRouterParams<TransferParamsEnum>({
       link: RouterPaths.TRANSFER,
@@ -30,6 +35,7 @@ const useDefaultPagePresenter = () => {
   }
 
   return {
+    accounts,
     navigateToTrsnsaction
   }
 
